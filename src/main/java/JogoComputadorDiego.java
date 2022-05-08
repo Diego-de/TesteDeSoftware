@@ -1,4 +1,4 @@
-public class JogoComputador {
+public class JogoComputadorDiego {
 
     private double memoria;
     private double memoriaJogo;

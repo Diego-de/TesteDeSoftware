@@ -8,14 +8,14 @@ import java.util.logging.Logger;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-public class CalculadoraTest {
+public class CalculadoraEmersonTest {
 
-    Calculadora calculo;
+    CalculadoraEmerson calculo;
     Logger log = Logger.getLogger("log");
 
     @BeforeEach
     public void setUp(){
-        this.calculo = new Calculadora();
+        this.calculo = new CalculadoraEmerson();
     }
 
     @Test

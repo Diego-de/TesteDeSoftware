@@ -8,14 +8,14 @@ import java.util.logging.Logger;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class JogoComputadorTest {
+public class JogoComputadorDiegoTest {
 
-    JogoComputador jogo;
+    JogoComputadorDiego jogo;
     Logger log = Logger.getLogger("log");
 
     @BeforeEach
     public void setUp(){
-        this.jogo = new JogoComputador();
+        this.jogo = new JogoComputadorDiego();
         jogo.setLigado(true);
     }
 

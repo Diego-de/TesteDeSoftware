@@ -1,4 +1,4 @@
-public class Caneta {
+public class CanetaDiego {
 
     private boolean CanetaAberta;
     private boolean CanetaFechada;

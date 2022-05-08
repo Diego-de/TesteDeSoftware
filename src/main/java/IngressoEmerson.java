@@ -1,4 +1,4 @@
-public class Ingresso {
+public class IngressoEmerson {
 
     private double valor;
     private int quantidade;

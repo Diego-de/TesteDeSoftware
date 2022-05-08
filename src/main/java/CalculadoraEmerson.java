@@ -1,4 +1,4 @@
-public class Calculadora {
+public class CalculadoraEmerson {
 
     public double soma(double a, double b){
         return a+b;

@@ -8,44 +8,44 @@ import java.util.logging.Logger;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class TestCaneta {
+public class TestCanetaDiego {
 
-    Caneta caneta;
+    CanetaDiego canetaDiego;
     Logger log = Logger.getLogger("log");
 
     @BeforeEach
     public void setUp(){
-        this.caneta = new Caneta();
-        caneta.setCanetaAberta(true);
+        this.canetaDiego = new CanetaDiego();
+        canetaDiego.setCanetaAberta(true);
     }
 
     @Test
     @DisplayName("Deve ver se a caneta está aberta")
     public void Aberta(){
         boolean testar = true;
-        assertTrue( caneta.Aberta(testar));
+        assertTrue( canetaDiego.Aberta(testar));
     }
 
     @Test
     @DisplayName("Deve ver se a caneta está fechada")
     public void Fechada(){
         boolean testar = false;
-        caneta.setCanetaFechada(true);
-        assertFalse( caneta.Fechada(testar));
+        canetaDiego.setCanetaFechada(true);
+        assertFalse( canetaDiego.Fechada(testar));
 
     }
 
     @Test
     @DisplayName("Deve ver se a caneta risca, mas so vai saber se estiver aberta")
     public void Risca(){
-        assertEquals("Escrevendo...",caneta.Escreve());
+        assertEquals("Escrevendo...", canetaDiego.Escreve());
     }
 
 
 
     @AfterEach
     public void Mostrar(){
-        this.log.info(caneta.toString());
+        this.log.info(canetaDiego.toString());
     }
 
 

@@ -1,4 +1,4 @@
-public class Carro {
+public class CarroDiego {
 
     private double saldo;
     private double precogasolina;

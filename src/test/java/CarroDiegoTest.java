@@ -7,16 +7,16 @@ import java.util.logging.Logger;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class CarroTest {
+public class CarroDiegoTest {
 
-    Carro carro;
+    CarroDiego carroDiego;
     Logger log = Logger.getLogger("log");
 
 
     @BeforeEach
     public void setUp(){
-        this.carro = new Carro();
-        carro.setLigado(true);
+        this.carroDiego = new CarroDiego();
+        carroDiego.setLigado(true);
     }
 
 
@@ -24,16 +24,16 @@ public class CarroTest {
     @Test
     @DisplayName("Comprando gasolina")
     public void ComprarGasolina(){
-        carro.setSaldo(100);
-        carro.setPrecogasolina(6.56);
-        assertEquals(80.32, carro.comprarGasolina());
+        carroDiego.setSaldo(100);
+        carroDiego.setPrecogasolina(6.56);
+        assertEquals(80.32, carroDiego.comprarGasolina());
     }
 
     @Test
     @DisplayName("Testar se o carro está ligado")
     public void Ligado(){
         boolean testar = true;
-        assertTrue(carro.carroLigado(testar));
+        assertTrue(carroDiego.carroLigado(testar));
 
     }
 
@@ -41,14 +41,14 @@ public class CarroTest {
     @Test
     @DisplayName("Testar se o carro vai dar partida")
     public void Anda(){
-        assertEquals("andando", carro.andando());
+        assertEquals("andando", carroDiego.andando());
     }
 
 
 
     @AfterEach
     public void ApresentarResults(){
-        this.log.info(carro.toString());
+        this.log.info(carroDiego.toString());
     }
 
 

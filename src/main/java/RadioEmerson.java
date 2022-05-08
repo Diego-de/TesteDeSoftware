@@ -1,4 +1,4 @@
-public class Radio {
+public class RadioEmerson {
 
     private int volume;
     private double canal;
