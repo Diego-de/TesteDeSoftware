@@ -6,8 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.logging.Logger;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class TestCaneta {
 
@@ -17,36 +16,13 @@ public class TestCaneta {
     @BeforeEach
     public void setUp(){
         this.caneta = new Caneta();
+        caneta.setCanetaAberta(true);
     }
-
-    @AfterEach
-    public void Mostrar(){
-        this.log.info(caneta.toString());
-    }
-
-    @Test
-    @DisplayName("Deve ver se a caneta é azul")
-    public void CorCaneta(){
-        caneta.setCorCaneta("Azul");
-
-        assertEquals("Azul", caneta.Cor());
-    }
-
-    @Test
-    @DisplayName("Deve ver se a caneta é bic")
-    public void TipoCaneta(){
-        caneta.setTipoCaneta("bic");
-
-        assertEquals("bic", caneta.Tipo());
-    }
-
 
     @Test
     @DisplayName("Deve ver se a caneta está aberta")
     public void Aberta(){
         boolean testar = true;
-        caneta.setCanetaAberta(true);
-
         assertTrue( caneta.Aberta(testar));
     }
 
@@ -54,18 +30,22 @@ public class TestCaneta {
     @DisplayName("Deve ver se a caneta está fechada")
     public void Fechada(){
         boolean testar = false;
-        caneta.setCanetaFechada(false);
-
-        assertTrue( caneta.Fechada(testar));
+        caneta.setCanetaFechada(true);
+        assertFalse( caneta.Fechada(testar));
 
     }
 
     @Test
     @DisplayName("Deve ver se a caneta risca, mas so vai saber se estiver aberta")
     public void Risca(){
-        caneta.setCanetaAberta(true);
-
         assertEquals("Escrevendo...",caneta.Escreve());
+    }
+
+
+
+    @AfterEach
+    public void Mostrar(){
+        this.log.info(caneta.toString());
     }
 
 

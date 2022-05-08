@@ -1,17 +1,7 @@
 public class Caneta {
 
-    private String CorCaneta;
-    private String TipoCaneta;
     private boolean CanetaAberta;
     private boolean CanetaFechada;
-
-
-
-    public String getCorCaneta() { return CorCaneta; }
-    public void setCorCaneta(String corCaneta) {CorCaneta = corCaneta; }
-
-    public String getTipoCaneta() {return TipoCaneta;}
-    public void setTipoCaneta(String tipoCaneta) {TipoCaneta = tipoCaneta;}
 
 
     public void setCanetaAberta(boolean canetaAberta) {
@@ -21,23 +11,12 @@ public class Caneta {
         CanetaFechada = canetaFechada;
     }
 
-
-    public  String Cor(){
-        if (this.CorCaneta == this.getCorCaneta()){
-            return "Azul";
-        }else {
-            return "Não azul";
-        }
+    public boolean getCanetaAberta() {
+        return CanetaAberta;
     }
-
-    public  String Tipo(){
-        if (this.TipoCaneta == this.getTipoCaneta()){
-            return "bic";
-        }else {
-            return "Não bic";
-        }
+    public boolean getCanetaFechada() {
+        return CanetaFechada;
     }
-
 
     public boolean Aberta(boolean testar) {
         if (this.CanetaAberta == testar){
@@ -67,10 +46,8 @@ public class Caneta {
     @Override
     public String toString() {
         return "Caneta{" +
-                "CorCaneta='" + CorCaneta + '\'' +
-                ", TipoCaneta='" + TipoCaneta + '\'' +
-                ", CanetaAberta=" + CanetaAberta +
-                ", CanetaFechada=" + CanetaFechada +
+                ", CanetaAberta=" + this.getCanetaAberta() +
+                ", CanetaFechada=" + this.getCanetaFechada() +
                 '}';
     }
 
