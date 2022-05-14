@@ -16,7 +16,7 @@ public class IngressoEmersonTest {
     @BeforeEach
     public void setUp(){
         this.ingressoEmerson = new IngressoEmerson();
-        ingressoEmerson.setValor(100);
+        ingressoEmerson.setValor(1000);
         ingressoEmerson.setQuantidade(10);
     }
 
@@ -27,7 +27,7 @@ public class IngressoEmersonTest {
     }
 
     @Test
-    @DisplayName("Verficar a quantidade Comprada")
+    @DisplayName("Verficar a quantidade compra")
     public void quantidadeComprada(){
         int quantidadeAvenda = 30;
         assertEquals(20, ingressoEmerson.quantidadeIngresso(quantidadeAvenda));
@@ -35,9 +35,9 @@ public class IngressoEmersonTest {
 
 
     @Test
-    @DisplayName("Verficar se o lucro teve resultado esperado")
-    public void Lucro(){
-       assertFalse(ingressoEmerson.lucro());
+    @DisplayName("Verficar o saldo")
+    public void saldo(){
+        assertEquals(500,ingressoEmerson.Saldo());
     }
 
 
