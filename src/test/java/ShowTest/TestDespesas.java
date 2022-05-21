@@ -33,13 +33,13 @@ public class TestDespesas {
     @Test
     @DisplayName("Verificar o valor com a taxa do local")
     public void TaxaLocal(){
-        assertEquals(1770000.0,despesas.TaxaLocal());
+        assertEquals(1370000.0,despesas.TaxaLocal());
     }
 
     @Test
     @DisplayName("Verificar o total de despesas")
     public void TotalDespesas(){
-        assertEquals(310000.0,despesas.totalDespesas());
+        assertEquals(490000.0,despesas.totalDespesas());
     }
 
 

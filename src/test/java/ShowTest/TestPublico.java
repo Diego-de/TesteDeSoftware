@@ -20,20 +20,19 @@ public class TestPublico {
     @BeforeEach
     public void setUp(){
         this.publico = new Publico();
+        publico.setIdade(18);
     }
 
 
     @Test
     @DisplayName("Testar o pedir documento caso seja maior que 18 anos")
     public void IdadeValida(){
-        publico.setIdade(18);
-        assertEquals("Mostrar Documento",publico.Entrada());
+        assertEquals("Mostrar",publico.Entrada());
     }
 
     @Test
     @DisplayName("Testar se o documento é valido")
     public void VerificarDocumentacao(){
-        publico.setDocumento("Mostrar");
         assertTrue(publico.Documentacao());
     }
 
@@ -41,7 +40,6 @@ public class TestPublico {
     @Test
     @DisplayName("Caso documento seja valido, Entregar Pulseira")
     public void EntregarPulseira(){
-        publico.setDocumento("Mostrar");
         assertEquals("Recebeu pulseira",publico.Pulseira());
     }
 

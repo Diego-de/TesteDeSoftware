@@ -26,20 +26,21 @@ public class Despesas {
     }
 
     public double TaxaLocal(){
-        double resultado = 1860000.0 - this.pagamentoLocal;
+        double resultado = 1460000.0 - this.pagamentoLocal;
         return resultado;
     }
 
     public double totalDespesas(){
-        double resultado = this.pagamentoCantor - this.pagamentoLocal;
+        double resultado = this.pagamentoCantor + this.pagamentoLocal;
         return resultado;
     }
 
 
-
-
-
-
-
-
+    @Override
+    public String toString() {
+        return "Despesas{" +
+                "pagamentoCantor=" + getPagamentoCantor() +
+                ", pagamentoLocal=" + getPagamentoLocal() +
+                '}';
+    }
 }
